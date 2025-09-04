@@ -1,0 +1,9 @@
+# Dependencies Management
+node_modules 
+
+# Build Directory
+dist 
+
+# Environment Management
+.env
+.env.*
