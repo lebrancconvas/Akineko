@@ -4,6 +4,10 @@
 
 [Poom Yimyuean (lebrancconvas)](https://github.com/lebrancconvas)
 
+## Overview
+
+Animations, Comics, and Video Games Culture Webboard.
+
 ## Packages
 
 - [frontend](https://github.com/lebrancconvas/Akineko/tree/master/frontend): Front-End of the project.
