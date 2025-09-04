@@ -1,0 +1,20 @@
+{
+  "name": "akineko",
+  "version": "1.0.0",
+  "description": "Animations, Comics, and Video Games Culture Webboard.",
+  "main": "index.js",
+  "scripts": {
+    "install:all": "pnpm install",
+    "dev": "concurrently \"pnpm dev:backend\" \"pnpm dev:frontend\"",
+    "dev:backend": "pnpm --filter backend dev",
+    "dev:frontend": "pnpm --filter frontend dev",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.15.1",
+  "devDependencies": {
+    "currently": "^0.0.8"
+  }
+}
