@@ -8,6 +8,8 @@
     "dev": "concurrently \"pnpm dev:backend\" \"pnpm dev:frontend\"",
     "dev:backend": "pnpm --filter backend dev",
     "dev:frontend": "pnpm --filter frontend dev",
+    "db:start": "pnpm --filter backend db:start",
+    "db:stop": "pnpm --filter backend db:stop",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
