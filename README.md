@@ -27,6 +27,16 @@ You can view the Project Requirement at the file -> [REQUIREMENT.md](https://git
 
 ### ER Diagram
 
+powered by [dbdiagram.io](https://dbdiagram.io/)
+
+**ER Diagram**
+
+![Akineko's ER Diagram](docs/diagram/Akineko-ER.png)
+
+**ER Diagram Code (dbdiagram)**
+
+[Akineko's ER Diagram Code](https://github.com/lebrancconvas/Akineko/blob/master/backend/docs/code/Akineko-ER.dbdiagram)
+
 ## Tech Stack
 
 ### Programming Language

@@ -1,0 +1,91 @@
+enum user_role_enum {
+  ADMIN
+  USER
+}
+
+Table users {
+  user_id serial4 [primary key, not null, unique]
+  user_role user_role_enum
+  username varchar(20) [not null, unique]
+  password varchar(18) [not null]
+  display_name varchar(100)
+  created_at timestamp [default: 'CURRENT_TIMESTAMP']
+  updated_at timestamp [default: 'CURRENT_TIMESTAMP']
+  used_flg bool [default: true]
+}
+
+Table posts {
+  post_id serial4 [primary key, not null, unique]
+  fk_user_author_id varchar(100) [not null]
+  post_content text
+  created_at timestamp [default: 'CURRENT_TIMESTAMP']
+  updated_at timestamp [default: 'CURRENT_TIMESTAMP']
+  used_flg bool [default: true]
+}
+
+ref: users.user_id < posts.fk_user_author_id
+
+Table tags {
+  tag_id serial4 [primary key, not null, unique]
+  tag_name varchar(200) [not null]
+  created_at timestamp [default: 'CURRENT_TIMESTAMP']
+  updated_at timestamp [default: 'CURRENT_TIMESTAMP']
+  used_flg bool [default: true]
+}
+
+Table favorites {
+  favorite_id serial4 [primary key, not null, unique]
+  fk_user_id int4 [not null]
+  fk_post_id int4 [not null]
+  created_at timestamp [default: 'CURRENT_TIMESTAMP']
+  updated_at timestamp [default: 'CURRENT_TIMESTAMP']
+  used_flg bool [default: true]
+}
+
+ref: users.user_id < favorites.fk_user_id
+ref: posts.post_id < favorites.fk_post_id
+
+Table comments {
+  comment_id serial4 [primary key, not null, unique]
+  fk_user_id int4 [not null]
+  fk_post_id int4 [not null]
+  comment_content text
+  created_at timestamp [default: 'CURRENT_TIMESTAMP']
+  updated_at timestamp [default: 'CURRENT_TIMESTAMP']
+  used_flg bool [default: true]
+}
+
+ref: users.user_id < comments.fk_user_id
+ref: posts.post_id < comments.fk_post_id
+
+Table post_tags {
+  post_tag serial4 [primary key, not null, unique]
+  fk_post_id int4 [not null]
+  fk_tag_id int4 [not null]
+  created_at timestamp [default: 'CURRENT_TIMESTAMP']
+  updated_at timestamp [default: 'CURRENT_TIMESTAMP']
+  used_flg bool [default: true]
+}
+
+ref: posts.post_id < post_tags.fk_post_id
+ref: tags.tag_id < post_tags.fk_tag_id
+
+enum notification_type_enum {
+  REPORT
+  FAVORTIE
+  COMMENT
+}
+
+Table notifications {
+  notification_id serial4 [primary key, not null, unique]
+  notification_type notification_type_enum
+  fk_user_sender_id int4 [not null]
+  fk_user_receiver_id int4 [not null]
+  notification_content text
+  created_at timestamp [default: 'CURRENT_TIMESTAMP']
+  updated_at timestamp [default: 'CURRENT_TIMESTAMP']
+  used_flg bool [default: true]
+}
+
+ref: users.user_id < notifications.fk_user_sender_id
+ref: users.user_id < notifications.fk_user_receiver_id
