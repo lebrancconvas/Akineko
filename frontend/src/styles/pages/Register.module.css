@@ -1,0 +1,27 @@
+.form {
+  outline: 1px solid black;
+  width: 50%;
+  height: 30vh;
+  border-radius: 10px;
+  margin: 20px;
+}
+
+label {
+  font-size: 30px;
+  margin: 0 10px;
+}
+
+input {
+  border: ridge;
+  font-size: 30px;
+}
+
+.submit {
+  outline: none;
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+

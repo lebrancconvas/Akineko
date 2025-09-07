@@ -5,6 +5,7 @@ import './index.css'
 
 // Component Import.
 import App from './App.tsx'
+import Register from './pages/Register.tsx';
 import PageNotFound from './pages/errors/PageNotFound.tsx';
 
 const router = createBrowserRouter([
@@ -12,6 +13,10 @@ const router = createBrowserRouter([
     path: "/",
     element: <App />,
     errorElement: <PageNotFound />
+  },
+  {
+    path: "/register",
+    element: <Register />
   }
 ]);
 
