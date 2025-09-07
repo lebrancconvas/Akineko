@@ -21,6 +21,8 @@ TBH...
 
 ### Project Requirement
 
+You can view the Project Requirement at the file -> [REQUIREMENT.md](https://github.com/lebrancconvas/Akineko/blob/master/backend/docs/REQUIREMENT.md)
+
 ### Use Case Diagram
 
 ### ER Diagram
